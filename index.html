@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha de RPG</title>
+  
+<styler>
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+       background-color: #f4e4c1;
+    }
+
+    .ficha {
+      background-color: aliceblue;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      
+    }
+
+    h1, h2 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-align: center;
+      color: #333;
+    }
+
+    .campo {
+      margin-bottom: 8px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    input[type="text"], textarea, select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1.5rem;
+      border-color: saddlebrown;
+      border-width: 0.2rem;
+
+    }
+    input[type="number"], textarea, select{
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1.5rem;
+      border-color: saddlebrown;
+      border-width: 0.2rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .atributos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    textarea {
+      resize: vertical;
+     border-color: saddlebrown;
+     border-width: 0.2rem;
+    }
+    a{
+      text-decoration: inherit;
+      color: rgb(0, 0, 0);
+    }
+    .button-inf{
+      font-size: large;
+      border-radius: 0.3rem;
+
+    }
+    .button-inf:hover{
+      border-radius: 0.3rem;
+      background-color: rgb(174, 209, 255);
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+     
+    }
+    #inform{
+      display: flex;
+      flex-flow: column;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      
+    }
+   .top-bar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 10px 20px;
+      background-color: #f8f9fa;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .top-bar a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    .top-bar a:hover {
+      text-decoration: underline;
+    }
+    .paragrafo-aviso{
+     color: red;
+    }
+ .logo-primaria{
+ 
+  border-radius: 1.2rem;
+  
+ }
+ .app-dat{
+  mix-blend-mode: multiply;
+  justify-content: center;
+  display: flex;
+ }
+</styler>
+  
+</head>
+<body>
+    <div class="app-dat">
+     <img src="https://i.pinimg.com/736x/f8/19/53/f81953c735bc0df9a875c2e5b6915cf2.jpg" alt="logo-kimetsu no yaiba" class="logo-primaria">
+      </div>
+
+    <div class="campo">
+      <label for="nome">Nome do Personagem:</label>
+      <input type="text" id="nome" name="nome">
+    </div>
+
+    <div class="grid">
+      <div class="campo">
+        <label for="raca">Raça:</label>
+        <input type="text" id="raca" name="raca">
+      </div>
+      <div class="campo">
+        <label for="classe">Classe:</label>
+        <input type="text" id="classe" name="classe">
+      </div>
+      <div class="campo">
+        <label for="nivel">Nível:</label>
+        <input type="number" id="nivel" name="nivel">
+      </div>
+       <div class="campo">
+        <label for="nivel">Nv_Corte:</label>
+        <input type="text" id="Nv_Corte" name="Nv_Corte">
+      </div>
+    </div>
+
+    <h2>Atributos</h2>
+    <div class="atributos">
+      <div class="campo">
+        <label>Força:</label>
+        <input type="number" id="Força" name="Força">
+      </div>
+      <div class="campo">
+        <label>Destreza:</label>
+        <input type="number" id="Destreza" name="Destreza">
+      </div>
+      <div class="campo">
+        <label>Constituição:</label>
+        <input type="number" id="Constituição" name="Constituição">
+      </div>
+      <div class="campo">
+        <label>Inteligência:</label>
+        <input type="number" id="Inteligência" name="Inteligência">
+      </div>
+      <div class="campo">
+        <label>Sabedoria:</label>
+        <input type="number" id="Sabedoria" name="Sabedoria">
+      </div>
+      <div class="campo">
+        <label>Carisma:</label>
+        <input type="number" id="Carisma" name="Carisma">
+      </div>
+    </div>
+
+    <h2>Talentos</h2>
+    <div class="campo">
+      <textarea id="Talentos" name="Talentos" rows="5" placeholder="Liste aqui os Talentos do personagem..."></textarea>
+    </div>
+
+    <h2>Perícias</h2>
+    <div class="campo">
+      <textarea id="perícias" name="perícias" rows="5" placeholder="Liste aqui as perícias do personagem..."></textarea>
+    </div>
+
+    <h2>Inventário</h2>
+    <div class="campo">
+      <textarea id="Inventário" name="Inventário" rows="5" placeholder="Itens, armas, equipamentos..."></textarea>
+    </div>
+  </div>
+  <br>
+    <div id="inform">
+   <button class="button-inf">
+    <a href="Kimetsu no yaiba.pdf" target="_blank" rel="noopener noreferrer">INFORMAÇÔES DA SESSÂO</a>
+    </button>
+    </div>
+    <footer>
+      <div class="paragrafo-aviso">
+      <p>Este site é de uso privado e não deve ser distribuido ao publico</p>
+      </div>
+      <address>
+        chanezuko04@gmail.com
+      </address>
+    </footer>
+  
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Seleciona todos os inputs e textareas
+    const fields = document.querySelectorAll('input, textarea');
+
+    fields.forEach(field => {
+      const key = `field_${field.name || field.id}`;
+
+      // Recupera valor salvo (se existir)
+      const saved = localStorage.getItem(key);
+      if (saved) {
+        field.value = saved;
+      }
+
+      // Salva valor quando o usuário digita
+      field.addEventListener('input', () => {
+        localStorage.setItem(key, field.value);
+      });
+    });
+  });
+</script>
+
+
+</body>
+</html>
